@@ -1,58 +1,80 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
-
+# REAL TIME DRIVER FATIGUE ALERT SYSTEM
+Driver fatigue and drowsiness are major causes of road accidents, necessitating an automated, real-time drowsiness detection system that accurately monitors drivers and alerts them to early signs of fatigue, as traditional methods often prove ineffective.
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+Drowsiness while driving is a major cause of road accidents, especially among drivers who operate vehicles for extended periods, such as truck and bus drivers. ​
+This issue results in thousands of injuries and crashes worldwide each year, with severe consequences. ​
+Developing technologies to detect and prevent driver drowsiness is a critical challenge in accident prevention systems. ​
+The objective of this project is to create a simulation that models a drowsiness detection system, which provides alerts specifically when the driver’s eyes are closed, aiming to reduce such accidents effectively. 
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+- **Eye Aspect Ratio (EAR) Calculation**: Measures eye openness to detect prolonged eye closure, indicating potential drowsiness.
+- **Mouth Aspect Ratio (MAR) Calculation**: Detects yawning by measuring mouth openness as a sign of drowsiness.
+- **Real-Time Face Detection**: Uses Dlib to detect faces and landmarks in live video frames.
+- **Facial Landmark Detection**: Identifies key points around eyes and mouth to calculate EAR and MAR.
+- **Drowsiness Alert System**: Triggers an audio alarm if drowsiness is detected based on EAR or MAR thresholds.
+- **GUI with Streamlit**: Provides a user-friendly interface with Start/Stop buttons and real-time feedback on drowsiness.
+- **Video Overlay with OpenCV**: Displays live video with annotated EAR/MAR values, alerts, and eye/mouth status.
+- **Multithreading for Alarm**: Plays alarm sound on a separate thread to avoid interrupting video processing.
+
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+- **Hardware**:
+  - Webcam (1080p recommended)
+  - CPU: Intel i5 or better
+  - RAM: 4 GB (8 GB recommended)
+  - Speakers (for alarm)
+  - Optional: NVIDIA GPU
+- **Software**:
+  - OS: Windows, macOS, or Linux
+  - Python 3.7+
+- **Python Libraries**:
+  - Streamlit: `pip install streamlit`
+  - OpenCV: `pip install opencv-python`
+  - Dlib: `pip install dlib`
+  - Imutils: `pip install imutils`
+  - SciPy: `pip install scipy`
+  - Pygame: `pip install pygame`
+- **Optional**:
+  - CMake (for Dlib installation): `sudo apt-get install cmake`
+  - CUDA (for GPU acceleration, if needed)
+
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
-
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+![image](https://github.com/user-attachments/assets/dd096c2b-dfbf-43e9-9ce8-23a1e03dad25)
 
 
 ## Output
 
 <!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+#### Output1 - Home page
+![image](https://github.com/user-attachments/assets/37b0f860-efc9-4937-b63a-51fbf8dd5d40)
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+#### Output2 - Eyes and Mouth Detected
+![image](https://github.com/user-attachments/assets/72fd3902-3e99-421a-b277-b72c102dcbc3)
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
+#### Output3 - Eyes Close Detected
+![image](https://github.com/user-attachments/assets/65e7bd78-29fc-4991-9ef3-cc27f05fdd6f)
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
-
+#### Output4 - Yawning Detected
+![image](https://github.com/user-attachments/assets/16a0ee28-1a82-41fe-b186-39c2d883949b)
 
 ## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+### Key Features
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
-
+- **Facial Landmark Detection**: Dlib accurately detects facial points, ensuring precise eye and mouth tracking.
+- **EAR & MAR Calculations**: Euclidean distance helps accurately detect closed eyes and yawning. EAR drop and high MAR correlate with drowsiness events.
+- **Convex Hull Visualization**: OpenCV highlights eye and mouth regions effectively in real-time.
+- **Real-Time Alarm System**: Pygame triggers alarms promptly upon detecting drowsiness.
 ## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+
+- [1] Muhammad Ramzan et al., "A survey on state-of-the-art drowsiness detectiontechniques", IEEE Access, vol. 7, pp. 61904-61919, 2019.<br>
+- [2] Swati Srivastava, "On the physiological measures based driver’s drowsinessdetection", 2021 5th International Conference on Information Systems and Computer Networks(ISCON), 2021.<br>
+- [3] R. B. Salikhov, V. Kh Abdrakhmanov and I. N. Safargalin, "Internet of things (IoT)security alarms on ESP32-CAM", Journal of Physics: Conference Series, vol. 2096, no. 1, 2021.<br>
+- [4] Vedat Ozan Oner, Developing IoT Projects With ESP32: Automate Your Home orBusiness With Inexpensive Wi-Fi Devices, Packt Publishing Ltd, 2021.<br>
+- [5] B. N. Manu, "Facial features monitoring for real time drowsiness detection", In 201612th International Conference on Innovations in information technology (IIT), pp. 1-4, 2016, November.<br>
+- [6] N. Irtija, M. Sami and M. A. R. Ahad, "Fatigue detection using facial landmarks", InInternational Symposium on Affective Science and Engineering ISASE2018, pp. 1-6, 2018.<br>
+- [7] Vahid Kazemi and Josephine Sullivan, "One millisecond face alignment with anensemble of regression trees", Proceedings of the IEEE conference on computer vision andpattern recognition, 2014.<br>
+- [8] R. B. Salikhov, V. Kh Abdrakhmanov and I. N. Safargalin, "Internet of things (IoT)security alarms on ESP32-CAM", Journal of Physics: Conference Series, vol. 2096, no. 1, 2021.
 
 
 
